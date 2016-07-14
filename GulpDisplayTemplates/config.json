@@ -1,0 +1,53 @@
+{
+  "fileMetadata": [
+    {
+      "name": "item_aTest.js",
+      "metadata": {
+        "__metadata": {
+          "type": "SP.Data.OData__x005f_catalogs_x002f_masterpageItem"
+        },
+        "Title": "A test for item template",
+        "MasterPageDescription": "This is a display template added via gulp.",
+        "ManagedPropertyMapping": "'Path','Title':'Title'",
+        "ContentTypeId": "0x0101002039C03B61C64EC4A04F5361F38510660500A0383064C59087438E649B7323C95AF6",
+        "DisplayTemplateLevel": "Item",
+        "TemplateHidden": false,
+        "TargetControlType": {
+          "__metadata": {
+            "type": "Collection(Edm.String)"
+          },
+          "results": [
+            "SearchResults",
+            "Content Web Parts"
+          ]
+        }
+      }
+    },
+    {
+      "name": "control_aTest.js",
+      "metadata": {
+        "__metadata": {
+          "type": "SP.Data.OData__x005f_catalogs_x002f_masterpageItem"
+        },
+        "Title": "A test for control template",
+        "MasterPageDescription": "This is a display template added via gulp.",
+        "ContentTypeId": "0x0101002039C03B61C64EC4A04F5361F38510660500A0383064C59087438E649B7323C95AF6",
+        "DisplayTemplateLevel": "Control",
+        "TemplateHidden": false,
+        "TargetControlType": {
+          "__metadata": {
+            "type": "Collection(Edm.String)"
+          },
+          "results": [
+            "SearchResults",
+            "Content Web Parts"
+          ]
+        }
+      }
+    }
+  ],
+  "username": "",
+  "password": "",
+  "site": "http://dev/",
+  "location": "_catalogs/masterpage/Test Display Templates"
+}
