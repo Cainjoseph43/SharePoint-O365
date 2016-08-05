@@ -1,0 +1,37 @@
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+<head>
+	<title></title>
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="statistics.css">
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.css">
+	<!-- Libraries & API's -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-aria.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+	<!-- statistics.js executes the rendering of charts -->
+	<script type="text/javascript" src="statistics.js"></script>
+</head>
+<body>
+	<div ng-controller="StatisticsController">
+		<div id="statistics-loader" ng-show="loading">
+			<img src="/_layouts/images/gears_anv4.gif"></img>
+		</div>
+		<div id="statistic-controls" class="hideWhenPrint" ng-hide="loading" ng-cloak>
+			<div id="statistics-filter-date">
+				<md-datepicker ng-model="filters.fromDate" ng-change="applyFilters()" md-placeholder="{{constant.from}}"></md-datepicker>
+				<md-datepicker ng-model="filters.toDate" ng-change="applyFilters()" md-placeholder="{{constant.to}}"></md-datepicker>
+			</div>
+			<div id="statistics-buttons">
+				<input type="button" ng-click="clearFilters();" value="{{constant.clear}}" />
+				<input type="button" ng-click="print();" value="{{constant.print}}" onclick="print()"/>
+			</div>
+		</div>
+		<div id="statistic-container" ng-hide="loading" ng-cloak></div>
+	</div>
+</body>
+</html>

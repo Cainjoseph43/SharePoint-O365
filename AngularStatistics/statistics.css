@@ -1,0 +1,37 @@
+
+@media print {
+	.hideWhenPrint {
+		display:none !important;
+	}
+	div #suiteBarLeft, div #titleAreaBox, div #suiteBarRight, div #suiteBar, #s4-titlerow, .ms-tableRow, #sideNavBox {
+		display:none !important;
+	}
+	
+	.ms-core-tableNoSpace.ms-webpartPage-root {
+		border-spacing:0px !important;
+	}
+	
+	.pageBreak + .pageBreak {
+		page-break-before: always;
+	}
+}
+
+#statistic-controls {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+#statistics-filter-date {
+    margin-right: 20px;
+}
+
+#statistic-container {
+    max-width: 95%;
+}
+
+#statistics-loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+}
